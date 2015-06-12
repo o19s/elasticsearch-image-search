@@ -1,0 +1,5 @@
+Pillow==2.8.2
+argparse==1.2.1
+elasticsearch==1.6.0
+urllib3==1.10.4
+wsgiref==0.1.2

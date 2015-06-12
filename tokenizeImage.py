@@ -15,8 +15,9 @@ def images():
 
 
 def tokens(imgF):
-    for idx, (r, g, b) in enumerate(imgF.getdata()):
-        yield "%s_%s_%s_%s" % (idx,  r/10, g/10, b/10)
+    resized = img.resize((50, 50))
+    for idx, (r, g, b) in enumerate(resized.getdata()):
+        yield "%s_%s_%s_%s" % (idx, r/10, g/10, b/10)
 
 def indexImg(imgId, tokens):
     es.index('images', doc_type='image', id=imgId, body={'bmp': tokens})

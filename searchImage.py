@@ -23,7 +23,7 @@ query = {
 
 res = es.search(index="images", doc_type='image', body=query)
 
-print res['hits']['hits'][0]['_id']
+print(res['hits']['hits'][0]['_id'])
 
 def indexImg(imgId, tokens):
     es.index('images', doc_type='image', id=imgId, body={'bmp': tokens})

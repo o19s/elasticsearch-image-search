@@ -5,6 +5,6 @@ Use the requirements.txt with a virtualenv:
 
 ```bash
 virtualenv venv
-pip install requirements.txt
-python tokenizeImages.py
+pip install -r requirements.txt
+python tokenizeImage.py
 ```
